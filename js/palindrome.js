@@ -48,6 +48,6 @@ const isAlphanumeric = (char) => {
 // statement to avoid export conflicts and allow tests
 // to run successfully
 
-module.exports = { isPalindrome, isAlphanumeric };
+// module.exports = { isPalindrome, isAlphanumeric };
 
-// export { isPalindrome, isAlphanumeric };
+export { isPalindrome, isAlphanumeric };

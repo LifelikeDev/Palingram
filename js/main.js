@@ -1,5 +1,5 @@
 import { isAnagram } from "./anagram.js";
-
-window.alert("hey");
+import { isPalindrome } from "./palindrome.js";
 
 console.log(isAnagram("door", "rodo"));
+console.log(isPalindrome("redivider"));

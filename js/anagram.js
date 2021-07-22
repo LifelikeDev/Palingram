@@ -12,6 +12,6 @@ const neutralizeStr = (str) => {
 // statement to avoid export conflicts and allow tests
 // to run successfully
 
-module.exports = { isAnagram, neutralizeStr };
+// module.exports = { isAnagram, neutralizeStr };
 
-// export { isAnagram, neutralizeStr };
+export { isAnagram, neutralizeStr };
