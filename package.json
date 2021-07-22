@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "jest": "jest --watchAll"
+    "jest": "jest",
+    "watch": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
