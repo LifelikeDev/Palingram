@@ -6,7 +6,4 @@ const neutralizeStr = (str) => {
   return str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("");
 };
 
-module.exports = {
-  isAnagram,
-  neutralizeStr,
-};
+export { isAnagram, neutralizeStr };

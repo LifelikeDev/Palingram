@@ -1,4 +1,4 @@
-const { isAnagram, neutralizeStr } = require("./app");
+import { isAnagram, neutralizeStr } from "./anagram.js";
 
 // check if both functions are defined or not
 test("isAnagram function is defined", () => {
