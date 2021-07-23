@@ -11,3 +11,11 @@ body {
 input::placeholder {
   font-size: 15px;
 }
+
+.palindromeOption {
+  display: none;
+}
+
+.anagramOption {
+  display: none;
+}

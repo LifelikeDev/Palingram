@@ -188,7 +188,7 @@
 
       <!----------- Palindrome Input Field ----------->
       <div
-        class="mx-auto mb-4"
+        class="mx-auto mb-4 palindromeOption"
         style="
           background-color: #eeeeee7a;
           width: 80%;
@@ -201,6 +201,7 @@
         </p>
         <form
           class="d-flex align-items-center justify-content-center flex-column"
+          id="palindromeForm"
         >
           <input
             class="form-control form-control-lg mb-2"
@@ -209,13 +210,19 @@
             aria-label="palindrome input field"
             id="palindromeInput"
           />
-          <button class="btn btn-secondary" type="submit">Validate</button>
+          <button
+            class="btn btn-secondary"
+            type="submit"
+            id="palindromeValidate"
+          >
+            Validate
+          </button>
         </form>
       </div>
 
       <!----------- Anagram Input Fields ----------->
       <div
-        class="mx-auto mb-5"
+        class="mx-auto mb-5 anagramOption"
         style="
           background-color: #eeeeee7a;
           width: 80%;
@@ -228,6 +235,7 @@
         </p>
         <form
           class="d-flex align-items-center justify-content-center flex-column"
+          id="anagramForm"
         >
           <input
             class="form-control form-control-lg mb-2"
@@ -243,7 +251,9 @@
             aria-label="palindrome input field"
             id="secondAnagramInput"
           />
-          <button class="btn btn-secondary" type="submit">Validate</button>
+          <button class="btn btn-secondary" type="submit" id="anagramValidate">
+            Validate
+          </button>
         </form>
       </div>
 
