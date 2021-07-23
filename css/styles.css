@@ -7,3 +7,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
+
+input::placeholder {
+  font-size: 15px;
+}
