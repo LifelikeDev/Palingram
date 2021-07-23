@@ -174,8 +174,13 @@
       <!------------- Select Option ------------->
 
       <div class="mx-auto mb-5" style="width: 80%; max-width: 400px">
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Select an option</option>
+        <p class="text-center">Select a choice</p>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          id="choiceSelect"
+        >
+          <option selected>-----</option>
           <option value="1">Palindrome</option>
           <option value="2">Anagram</option>
         </select>
@@ -194,17 +199,23 @@
         <p class="text-muted text-center">
           Enter a word or phrase to validate if it is a palindrome
         </p>
-        <input
-          class="form-control form-control-lg"
-          type="text"
-          placeholder="enter word or phrase here"
-          aria-label="palindrome input field"
-        />
+        <form
+          class="d-flex align-items-center justify-content-center flex-column"
+        >
+          <input
+            class="form-control form-control-lg mb-2"
+            type="text"
+            placeholder="enter word or phrase here"
+            aria-label="palindrome input field"
+            id="palindromeInput"
+          />
+          <button class="btn btn-secondary" type="submit">Validate</button>
+        </form>
       </div>
 
       <!----------- Anagram Input Fields ----------->
       <div
-        class="mx-auto"
+        class="mx-auto mb-5"
         style="
           background-color: #eeeeee7a;
           width: 80%;
@@ -215,18 +226,25 @@
         <p class="text-muted text-center">
           Enter two words to validate if they are anagrams of each other
         </p>
-        <input
-          class="form-control form-control-lg mb-2"
-          type="text"
-          placeholder="enter first word here"
-          aria-label="palindrome input field"
-        />
-        <input
-          class="form-control form-control-lg"
-          type="text"
-          placeholder="enter second word here"
-          aria-label="palindrome input field"
-        />
+        <form
+          class="d-flex align-items-center justify-content-center flex-column"
+        >
+          <input
+            class="form-control form-control-lg mb-2"
+            type="text"
+            placeholder="enter first word here"
+            aria-label="palindrome input field"
+            id="firstAnagramInput"
+          />
+          <input
+            class="form-control form-control-lg mb-2"
+            type="text"
+            placeholder="enter second word here"
+            aria-label="palindrome input field"
+            id="secondAnagramInput"
+          />
+          <button class="btn btn-secondary" type="submit">Validate</button>
+        </form>
       </div>
 
       <!-- Container ending tag -->

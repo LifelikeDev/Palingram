@@ -5,7 +5,7 @@ body {
     rgba(139, 168, 173, 0.205) 100%
   );
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 input::placeholder {
