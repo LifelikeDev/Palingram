@@ -64,11 +64,14 @@ palindromeForm.addEventListener("submit", (e) => {
           </div>
         </div>`;
   } else {
-    console.log(palindromeInput.value);
+    const palindromeAnswer = isPalindrome(palindromeInput.value);
+    // console.log(palindromeAnswer);
     answerModal.innerHTML = `<div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="answerModalLabel">Answer Correct</h5>
+              <h5 class="modal-title" id="answerModalLabel">${
+                palindromeAnswer === true ? "Yaaaay!" : "Sorry"
+              }</h5>
               <button
                 type="button"
                 class="btn-close"
@@ -76,7 +79,11 @@ palindromeForm.addEventListener("submit", (e) => {
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">rac-e-car</div>
+            <div class="modal-body">${
+              palindromeAnswer === true
+                ? `<strong>${palindromeInput.value.toUpperCase()}</strong> is a Palindrome`
+                : `<strong>${palindromeInput.value.toUpperCase()}</strong> is not a Palindrome`
+            }</div>
           </div>
         </div>`;
     palindromeInput.value = "";
@@ -87,13 +94,21 @@ palindromeForm.addEventListener("submit", (e) => {
 anagramForm.addEventListener("submit", (e) => {
   e.preventDefault();
   if (firstAnagramInput.value !== "" && secondAnagramInput.value !== "") {
-    console.log(firstAnagramInput.value, secondAnagramInput.value);
-    firstAnagramInput.value = "";
-    secondAnagramInput.value = "";
+    const anagramAnswer = isAnagram(
+      firstAnagramInput.value.trim(),
+      secondAnagramInput.value.trim()
+    );
+    // console.log(
+    //   firstAnagramInput.value,
+    //   secondAnagramInput.value,
+    //   anagramAnswer
+    // );
     answerModal.innerHTML = `<div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="answerModalLabel">Answer Correct</h5>
+              <h5 class="modal-title" id="answerModalLabel">${
+                anagramAnswer === true ? "Yaaaay!" : "Sorry"
+              }</h5>
               <button
                 type="button"
                 class="btn-close"
@@ -101,9 +116,15 @@ anagramForm.addEventListener("submit", (e) => {
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">rac-e-car</div>
+            <div class="modal-body">${
+              anagramAnswer === true
+                ? `<strong>${firstAnagramInput.value.toUpperCase()}</strong> is an anagram of <strong>${secondAnagramInput.value.toUpperCase()}</strong>`
+                : `<strong>${firstAnagramInput.value.toUpperCase()}</strong> is not an anagram of <strong>${secondAnagramInput.value.toUpperCase()}</strong>`
+            }</div>
           </div>
         </div>`;
+    firstAnagramInput.value = "";
+    secondAnagramInput.value = "";
   } else {
     answerModal.innerHTML = `<div class="modal-dialog">
           <div class="modal-content">
@@ -121,6 +142,3 @@ anagramForm.addEventListener("submit", (e) => {
         </div>`;
   }
 });
-
-// console.log(isAnagram("door", "rodo"));
-// console.log(isPalindrome("redivider"));
