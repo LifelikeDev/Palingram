@@ -10,6 +10,7 @@ const anagramForm = document.getElementById("anagramForm");
 const palindromeInput = document.getElementById("palindromeInput");
 const firstAnagramInput = document.getElementById("firstAnagramInput");
 const secondAnagramInput = document.getElementById("secondAnagramInput");
+const answerModal = document.getElementById("answerModal");
 
 window.addEventListener("load", () => {
   for (let i = 0; i < options.length; i++) {
@@ -44,23 +45,80 @@ choiceSelect.addEventListener("change", () => {
 });
 
 // handling palindrome form
-palindromeForm.addEventListener("submit", () => {
+palindromeForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
   if (palindromeInput.value === "") {
-    alert("You need to enter a word or phrase");
+    answerModal.innerHTML = `<div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="answerModalLabel">No entered value</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">Please enter a word or a phrase</div>
+          </div>
+        </div>`;
   } else {
     console.log(palindromeInput.value);
+    answerModal.innerHTML = `<div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="answerModalLabel">Answer Correct</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">rac-e-car</div>
+          </div>
+        </div>`;
     palindromeInput.value = "";
   }
 });
 
 // handling anagram form
-anagramForm.addEventListener("submit", () => {
+anagramForm.addEventListener("submit", (e) => {
+  e.preventDefault();
   if (firstAnagramInput.value !== "" && secondAnagramInput.value !== "") {
     console.log(firstAnagramInput.value, secondAnagramInput.value);
     firstAnagramInput.value = "";
     secondAnagramInput.value = "";
+    answerModal.innerHTML = `<div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="answerModalLabel">Answer Correct</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">rac-e-car</div>
+          </div>
+        </div>`;
   } else {
-    alert("You need to enter a word in each field");
+    answerModal.innerHTML = `<div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="answerModalLabel">No entered value</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">Please enter a word in each field</div>
+          </div>
+        </div>`;
   }
 });
 

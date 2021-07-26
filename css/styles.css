@@ -8,6 +8,11 @@ body {
   min-height: 100vh;
 }
 
+.nav-option:hover {
+  background-color: #eeeeee48;
+  font-weight: 600;
+}
+
 input::placeholder {
   font-size: 15px;
 }
