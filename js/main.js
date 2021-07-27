@@ -61,7 +61,7 @@ palindromeForm.addEventListener("submit", (e) => {
               ></button>
             </div>
             <div class="modal-body">Please enter a word or a phrase</div>
-          </div>
+            </div>
         </div>`;
   } else {
     const palindromeAnswer = isPalindrome(palindromeInput.value);
@@ -70,7 +70,7 @@ palindromeForm.addEventListener("submit", (e) => {
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="answerModalLabel">${
-                palindromeAnswer === true ? "Yaaaay!" : "Sorry"
+                palindromeAnswer === true ? "Yaaaay! 😍😍😍" : "Awwwww! 😥😥😥"
               }</h5>
               <button
                 type="button"
@@ -81,8 +81,8 @@ palindromeForm.addEventListener("submit", (e) => {
             </div>
             <div class="modal-body">${
               palindromeAnswer === true
-                ? `<strong>${palindromeInput.value.toUpperCase()}</strong> is a Palindrome`
-                : `<strong>${palindromeInput.value.toUpperCase()}</strong> is not a Palindrome`
+                ? `<strong>${palindromeInput.value.toUpperCase()}</strong> is a palindrome`
+                : `<strong>${palindromeInput.value.toUpperCase()}</strong> is not a palindrome`
             }</div>
           </div>
         </div>`;
@@ -107,7 +107,7 @@ anagramForm.addEventListener("submit", (e) => {
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="answerModalLabel">${
-                anagramAnswer === true ? "Yaaaay!" : "Sorry"
+                anagramAnswer === true ? "Yaaaay! 😍😍😍" : "Awwwww! 😥😥😥"
               }</h5>
               <button
                 type="button"

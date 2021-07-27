@@ -15,6 +15,10 @@ body {
   letter-spacing: 1px;
 }
 
+.modal-header {
+  border-bottom-color: transparent;
+}
+
 .nav-option:hover {
   background-color: #eeeeee48;
   font-weight: 600;
