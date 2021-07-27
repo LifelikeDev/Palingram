@@ -42,6 +42,35 @@ const isAlphanumeric = (char) => {
   }
 };
 
+// visualize palindrome
+// function splitWord(str) {
+//   const splitStr = str.split("");
+//   const midStr = splitStr.length / 2;
+//   let start = 0;
+//   let end = splitStr.length - 1;
+
+//   const beforeMid = [];
+//   const afterMid = [];
+
+//   while (start < end) {
+//     let startLetter = splitStr[start];
+//     let endLetter = splitStr[end];
+//     beforeMid.push(startLetter);
+//     afterMid.push(endLetter);
+
+//     start++;
+//     end--;
+//   }
+
+//   const beforeLetters = beforeMid.sort().join("");
+//   const afterLetters = afterMid.sort().join("");
+//   const display = `${beforeLetters}-${str.charAt(midStr)}-${afterLetters}`;
+
+//   return display;
+// }
+
+// console.log(splitWord("redivider"));
+
 // Uncomment the code below to run tests.
 // When you uncomment the module.exports statement,
 // comment out the export statement below the module.exports
