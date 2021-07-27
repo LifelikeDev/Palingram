@@ -69,9 +69,11 @@ palindromeForm.addEventListener("submit", (e) => {
     answerModal.innerHTML = `<div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="answerModalLabel">${
-                palindromeAnswer === true ? "Yaaaay! 😍😍😍" : "Awwwww! 😥😥😥"
-              }</h5>
+              <h5 class="modal-title ${
+                palindromeAnswer === true ? "header-correct" : "header-wrong"
+              }" id="answerModalLabel">${
+      palindromeAnswer === true ? "Yaaaay! 😍😍😍" : "Awwwww! 😥😥😥"
+    }</h5>
               <button
                 type="button"
                 class="btn-close"

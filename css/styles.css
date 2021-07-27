@@ -24,6 +24,18 @@ body {
   font-weight: 600;
 }
 
+.modal-title {
+  font-weight: 600;
+}
+
+.header-correct {
+  color: rgb(11, 192, 11);
+}
+
+.header-wrong {
+  color: #e00;
+}
+
 input::placeholder {
   font-size: 15px;
 }
